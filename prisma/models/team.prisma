@@ -1,0 +1,8 @@
+model Team{
+    id Int @id @default(autoincrement())
+    name String
+
+    players TeamPlayer[]
+    homeMatches Match[] @relation("home_team")
+    awayMatches Match[] @relation(away_team")
+}

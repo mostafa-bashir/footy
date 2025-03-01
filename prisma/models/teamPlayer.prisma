@@ -1,0 +1,9 @@
+model TeamPlayer{
+    teamId Int 
+    playerId Int
+
+    team Team @relation(fields:[teamId], refernces: [id])
+    player Player @relation(fields:[playerId, refernces: [id]])
+
+    @@id([teamId, playerId])
+}
